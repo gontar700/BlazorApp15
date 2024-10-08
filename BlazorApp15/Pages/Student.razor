@@ -1,0 +1,50 @@
+﻿@page "/student"
+<h3>Student</h3>
+
+<span style="background-color:lightgreen">
+    @{
+        Random r = new Random();
+        int hour1 = r.Next(0, 25);
+        // int hour2 = r.Next(0, 25);
+        int minute1 = r.Next(0, 60);
+        // int minute2 = r.Next(0, 60);
+        int second1 = r.Next(0, 60);
+        // int second2 = r.Next(0, 60);
+
+        TimeSpan time1 = new TimeSpan(hour1, minute1, second1); // 12:41:00
+        TimeSpan midnight = new TimeSpan(0, 0, 0); // 14:30:00
+        TimeSpan noon = new TimeSpan(12, 0, 0); // 14:30:00
+        TimeSpan night = new TimeSpan(20, 0, 0); // 14:30:00
+
+
+    }
+    <p>Time1: @time1</p>
+    @* <p>Time2: @time2</p> *@
+
+    @if (time1 >= midnight && time1 <= noon)
+    {
+        <p>Good morning</p>
+    }
+    else if (time1 >= noon && time1 <= night)
+    {
+        <p> Good evening </p>
+    }
+    else
+    {
+        <p>Good night</p>
+    }
+
+      
+</span>
+
+
+<p>@MyString</p>
+
+@code {
+   string MyString = "Daniel Gontar";
+}
+
+
+@*     The Time is: @DateTime.Now.Hour.ToString():
+    @DateTime.Now.Minute.ToString():
+    @DateTime.Now.Second.ToString(): *@

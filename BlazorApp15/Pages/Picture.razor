@@ -1,0 +1,24 @@
+﻿@page "/picture"
+<h3>Picture</h3>
+
+@{
+    Random r = new Random();
+    int num = r.Next(-100, 101);
+}
+<p>@num</p>
+
+@if (num>0)
+{
+    <span style="font-size:large">The number is positive</span>
+}
+else if (num == 0)
+{
+    <span style="font-size:large">The number is zero</span>
+}
+else
+{
+    <span style="font-size:large">The number is negative</span>
+}
+@code {
+
+}
