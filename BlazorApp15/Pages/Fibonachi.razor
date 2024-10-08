@@ -1,0 +1,33 @@
+﻿@page "/fibonachi"
+
+<h3>Fibonachi</h3>
+
+@{
+    int fib1 = 0;
+    int fib2 = 1;
+    int fib3;
+}
+<ul>
+    <li>
+        @fib1
+    </li>
+    <li>
+        @fib2
+    </li>
+    @for (int i = 3; i < 21; i++)
+    {
+        fib3 = fib2 + fib1;
+
+        <li>
+            @fib3
+        </li>
+        fib1 = fib2;
+        fib2 = fib3;     
+    }
+    
+</ul>
+
+
+@code {
+
+}
