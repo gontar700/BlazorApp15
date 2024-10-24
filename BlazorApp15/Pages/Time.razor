@@ -1,40 +1,50 @@
 ﻿@page "/time"
 <h3>Time</h3>
 
-<div class="time">
-    @{
-        Random r = new Random();
-        int hour1 = r.Next(0, 25);
-        int minute1 = r.Next(0, 61);
-        int second1 = r.Next(0, 61);
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="time">
+                @{
+                    Random r = new Random();
+                    int hour1 = r.Next(0, 25);
+                    int minute1 = r.Next(0, 61);
+                    int second1 = r.Next(0, 61);
 
-        TimeSpan time1 = new TimeSpan(hour1, minute1, second1); // 12:41:00
-        // devide day to four milestones
-        TimeSpan night = new TimeSpan(0, 0, 0);
-        TimeSpan morning = new TimeSpan(6, 0, 0);
-        TimeSpan noon = new TimeSpan(12, 0, 0);
-        TimeSpan evening = new TimeSpan(18, 0, 0);
+                    TimeSpan time1 = new TimeSpan(hour1, minute1, second1); // 12:41:00
+                                                                            // devide day to four milestones
+                    TimeSpan night = new TimeSpan(0, 0, 0);
+                    TimeSpan morning = new TimeSpan(6, 0, 0);
+                    TimeSpan noon = new TimeSpan(12, 0, 0);
+                    TimeSpan evening = new TimeSpan(18, 0, 0);
 
 
-    }
-    <p class="timeis">Time is: @time1</p>
+                }
+                <p class="timeis">Random time is: @time1</p>
 
-    @if (time1 >= night && time1 < morning)
-    {
-        <p>Good night</p>
-    }
-    else if (time1 >= morning && time1 < noon)
-    {
-        <p> Good morning </p>
-    }
-    else if (time1 >= noon && time1 < evening)
-    {
-        <p>Good day</p>
-    } 
-    else{
-        <p> Good evening</p>
-    }
-
-      
+                @if (time1 >= night && time1 < morning)
+                {
+                    <p>Good night</p>
+                }
+                else if (time1 >= morning && time1 < noon)
+                {
+                    <p> Good morning </p>
+                }
+                else if (time1 >= noon && time1 < evening)
+                {
+                    <p>Good day</p>
+                }
+                else
+                {
+                    <p> Good evening</p>
+                }
+            </div>
+            <img src="images/watch1.jpg" alt="watch" />
+        </div>
+        <div class="col-12 col-md-6 datetimenow mt-4">
+                Actual time is: @DateTime.Now.Hour.ToString():
+                @DateTime.Now.Minute.ToString():
+                @DateTime.Now.Second.ToString()
+        </div>
+    </div>
 </div>
-<img src="images/watch1.jpg" alt="watch" />

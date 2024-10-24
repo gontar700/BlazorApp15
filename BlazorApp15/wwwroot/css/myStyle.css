@@ -1,5 +1,4 @@
-﻿body {
-}
+﻿body {}
 h3 {
     background-color: palegoldenrod;
     text-align: center;
@@ -7,6 +6,7 @@ h3 {
     font-size: 33px;
     color: purple;
 }
+
 .timeis {
     color: lightseagreen;
     font-family: monospace;
@@ -15,4 +15,27 @@ h3 {
 
 img{
     width:250px;
+}
+
+.boom7{
+    border-radius:5%;
+    border-width:4px;
+    border-color:darkmagenta;
+}
+
+.datetimenow {
+    background-color: lightcyan;
+    text-align: center;
+    font-family: monospace;
+    font-size: 16px;
+    color: purple;
+}
+
+.sp{
+    width:22px;
+    margin:5px;
+    color:darkslateblue;
+    font-size:22px;
+    font-weight:600;
+    font-family:Courier New, Courier, monospace;
 }

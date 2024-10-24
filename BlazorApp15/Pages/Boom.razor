@@ -1,0 +1,27 @@
+﻿@page "/boom"
+<h3>7 Boom</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-2">
+            <img src="images/boom7.jpg" alt="7 boom image" class="boom7" />
+        </div>
+        <div class="col-12 col-md-6 mt-2">
+            @for (int i = 1; i <= 100; i++)
+            {
+                @if(i%7==0 || i%10==7 || i / 10 == 7)
+                {
+                    <span class="sp">
+                        Boom
+                    </span>
+                }
+                else
+                {
+                    <span class="sp">
+                        @i
+                    </span>
+                }
+            }
+        </div>
+    </div>
+</div>
