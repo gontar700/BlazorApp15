@@ -1,0 +1,18 @@
+﻿body {
+}
+h3 {
+    background-color: palegoldenrod;
+    text-align: center;
+    font-family: monospace;
+    font-size: 33px;
+    color: purple;
+}
+.timeis {
+    color: lightseagreen;
+    font-family: monospace;
+    font-weight:700;
+}
+
+img{
+    width:250px;
+}
