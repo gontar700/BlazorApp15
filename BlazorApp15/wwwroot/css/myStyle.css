@@ -39,3 +39,33 @@ img{
     font-weight:600;
     font-family:Courier New, Courier, monospace;
 }
+
+td{
+    font-size:10px;
+}
+th{
+    font-size:13px;
+}
+.phytagor{
+    width:150px;
+    float:right;
+}
+#bg1{
+    width:60%;
+    height:50%;
+    position:absolute;
+    top:120px;
+    left:32%;
+    z-index:-10;
+    background-color:lightblue;
+}
+.hidden{
+    display:none;
+}
+
+
+@media screen and (max-width: 500px) {
+    table{
+        display:none;
+    }
+}
